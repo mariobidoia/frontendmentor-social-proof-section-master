@@ -1,0 +1,232 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --very-darkmagenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* font-family: 'Spartan', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/bg-pattern-top-desktop.svg) no-repeat,
+    url(images/bg-pattern-bottom-desktop.svg) no-repeat;
+  background-position: top left, right bottom;
+   
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Spartan", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  font-weight: 700;
+  color: var(--very-darkmagenta);
+  margin: 80px 52px 0px;
+  text-align: center;
+}
+
+.title p {
+  text-align: center;
+  margin: 23px 29px 30px;
+  font-family: "Spartan", sans-serif;
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.rates-desc {
+  background-color: var(--light-grayish-magenta);
+  height: 78px;
+  text-align: center;
+  margin: 16px 24px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rates-desc ul {
+  list-style: none;
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+}
+
+.rates-desc ul li {
+  margin-bottom: 15px;
+  margin-left: 7px;
+}
+
+.rates-desc p {
+  color: var(--very-darkmagenta);
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.card {
+  padding: 40px 40px 0px 33px;
+  height: 235px;
+  width: 80vw;
+  background-color: var(--very-darkmagenta);
+  color: var(--white);
+  margin: 0 0px 16px;
+  border-radius: 10px;
+}
+
+.buyers {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 28px;
+}
+
+.image-buyer {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+  border-radius: 50%;
+  height: 40px;
+  grid-column-start: 1;
+}
+
+.buyer-verified {
+  grid-column-start: 2;
+  color: var(--soft-pink);
+}
+
+.depoimento {
+  line-height: 23px;
+  font-size: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    flex-direction: column;
+    flex-basis: 100%;
+    padding: 123px 165px 100px;
+    margin: 0;
+  }
+
+  
+  .rates-desc ul li {
+    margin-bottom: 0px;
+    margin-left: 8px;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .rates-desc {
+    flex-direction: row;
+    width: 445px;
+    height: 56px;
+  }
+
+  .rates-desc p{
+    margin: 0 0 0 33px;
+  }
+  .rates {
+    padding: 18px 0 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rates div:nth-child(1) {
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .rates div:nth-child(2) {
+    margin: 16px 0 0 0;
+    align-self: center;
+  }
+  .rates div:nth-child(3) {
+    margin: 16px 0 0 0;
+    align-self: flex-end;
+  }
+
+  .info-rates {
+    display: flex;
+    margin-bottom: 50px;
+  }
+
+  .info-rates h1 {
+    text-align: left;
+    margin: 0 120px 0 0;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .title p {
+    text-align: left;
+    margin: 14px 100px 0 0;
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0px;
+    word-spacing: 0;
+  }
+
+  .card {
+    width: 350px;
+    margin: 0;
+    /* max-width: 26vw; */
+  }
+
+  .info-cards{
+    width: 100%;
+    height: 266px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .info-cards div:nth-child(2){
+    align-self: center;
+    margin: 0 16px;
+  }
+
+  .info-cards div:last-child{
+    align-self: flex-end;
+  }
+
+  .depoimento{
+    font-size: 12px;
+    text-align: left;
+    margin-right: 8px;
+  }
+}
