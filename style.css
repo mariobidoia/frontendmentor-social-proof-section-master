@@ -221,4 +221,13 @@ body {
     text-align: left;
     margin-right: 8px;
   }
+
+  .buyer-name{
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .buyer-verified{
+    font-size: 12px;
+  }
 }
